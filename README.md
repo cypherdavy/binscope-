@@ -84,7 +84,6 @@ flowchart LR
 >
 > ### → [**cypherdavy.github.io/binscope-**](https://cypherdavy.github.io/binscope-/)
 
-For the AI Analyst, paste your [Anthropic API key](https://console.anthropic.com/) into the right-hand panel. It's stored in `localStorage` only — never sent anywhere except Anthropic's API.
 
 ---
 
