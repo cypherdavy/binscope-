@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="BinScope — reverse engineering in your browser">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#1a0b2e"/>
+    </linearGradient>
+
+    <radialGradient id="aurora1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aurora2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aurora3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="35%" stop-color="#f59e0b"/>
+      <stop offset="65%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+      <animate attributeName="x1" values="-1;1" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f59e0b" stroke-width="0.4" opacity="0.18"/>
+    </pattern>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="360" fill="url(#bg)"/>
+
+  <!-- drifting auroras -->
+  <g opacity="0.85">
+    <circle cx="180" cy="120" r="260" fill="url(#aurora1)">
+      <animate attributeName="cx" values="180;320;180" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="120;90;120" dur="14s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1020" cy="260" r="280" fill="url(#aurora2)">
+      <animate attributeName="cx" values="1020;880;1020" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="260;200;260" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="180" r="220" fill="url(#aurora3)">
+      <animate attributeName="cy" values="180;240;180" dur="22s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- grid overlay -->
+  <rect width="1200" height="360" fill="url(#grid)"/>
+
+  <!-- scanning line -->
+  <rect x="0" y="-40" width="1200" height="40" fill="#f59e0b" opacity="0.06">
+    <animate attributeName="y" values="-40;360" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- logo group -->
+  <g transform="translate(220 180)">
+    <!-- outer pulse rings -->
+    <circle r="68" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.6">
+      <animate attributeName="r" values="58;90;58" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="78" fill="none" stroke="#d946ef" stroke-width="1.5" opacity="0.5">
+      <animate attributeName="r" values="68;100;68" dur="3s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+
+    <!-- rotating dashed ring -->
+    <circle r="62" fill="none" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- orbit dots -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+      <circle cx="62" cy="0" r="3" fill="#fbbf24" filter="url(#softGlow)"/>
+      <circle cx="-62" cy="0" r="2" fill="#d946ef" filter="url(#softGlow)"/>
+      <circle cx="0" cy="62" r="2" fill="#06b6d4" filter="url(#softGlow)"/>
+    </g>
+
+    <!-- logo core: hexagonal mark -->
+    <g filter="url(#glow)">
+      <polygon points="0,-44 38,-22 38,22 0,44 -38,22 -38,-22"
+               fill="url(#logoGrad)" stroke="#fef3c7" stroke-width="1.5"/>
+      <!-- inner hex (smaller) -->
+      <polygon points="0,-24 21,-12 21,12 0,24 -21,12 -21,-12"
+               fill="#09090b" stroke="#fef3c7" stroke-width="1.2"/>
+      <!-- center dot -->
+      <circle r="6" fill="#fbbf24">
+        <animate attributeName="r" values="5;8;5" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- crosshair ticks -->
+    <g stroke="#fef3c7" stroke-width="1" opacity="0.85">
+      <line x1="-54" y1="0" x2="-46" y2="0"/>
+      <line x1="46" y1="0" x2="54" y2="0"/>
+      <line x1="0" y1="-54" x2="0" y2="-46"/>
+      <line x1="0" y1="46" x2="0" y2="54"/>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <g transform="translate(340 150)">
+    <text font-family="'Space Grotesk', 'Segoe UI', sans-serif"
+          font-size="84"
+          font-weight="800"
+          fill="url(#shimmer)"
+          letter-spacing="-2">
+      BinScope
+    </text>
+
+    <!-- caret -->
+    <rect x="346" y="-58" width="6" height="70" fill="#f59e0b">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- tagline -->
+    <text y="50"
+          font-family="'JetBrains Mono', monospace"
+          font-size="18"
+          fill="#a1a1aa"
+          letter-spacing="4">
+      <tspan fill="#10b981">$</tspan> reverse engineering · in your browser
+    </text>
+
+    <!-- format chips -->
+    <g transform="translate(0 80)" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">
+      <g>
+        <rect x="0" y="0" width="46" height="22" rx="11" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-opacity="0.5"/>
+        <text x="23" y="15" text-anchor="middle" fill="#fbbf24">PE</text>
+      </g>
+      <g transform="translate(56 0)">
+        <rect width="46" height="22" rx="11" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-opacity="0.5"/>
+        <text x="23" y="15" text-anchor="middle" fill="#c4b5fd">ELF</text>
+      </g>
+      <g transform="translate(112 0)">
+        <rect width="66" height="22" rx="11" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-opacity="0.5"/>
+        <text x="33" y="15" text-anchor="middle" fill="#67e8f9">Mach-O</text>
+      </g>
+      <g transform="translate(188 0)">
+        <rect width="58" height="22" rx="11" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-opacity="0.5"/>
+        <text x="29" y="15" text-anchor="middle" fill="#6ee7b7">WASM</text>
+      </g>
+      <g transform="translate(256 0)">
+        <rect width="46" height="22" rx="11" fill="rgba(244,114,182,0.15)" stroke="#f472b6" stroke-opacity="0.5"/>
+        <text x="23" y="15" text-anchor="middle" fill="#fbcfe8">DEX</text>
+      </g>
+      <g transform="translate(312 0)">
+        <rect width="56" height="22" rx="11" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-opacity="0.5"/>
+        <text x="28" y="15" text-anchor="middle" fill="#fde68a">Java</text>
+      </g>
+      <g transform="translate(378 0)">
+        <rect width="46" height="22" rx="11" fill="rgba(148,163,184,0.15)" stroke="#94a3b8" stroke-opacity="0.5"/>
+        <text x="23" y="15" text-anchor="middle" fill="#cbd5e1">pyc</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- streaming hex bytes (top right) -->
+  <g font-family="'JetBrains Mono', monospace" font-size="11" fill="#10b981" opacity="0.55">
+    <text x="900" y="30">48 89 e5 b8 2a 00 00 00</text>
+    <text x="900" y="46">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2s" repeatCount="indefinite"/>
+      48 83 c0 01 e8 10 00 00
+    </text>
+    <text x="900" y="62">5d c3 cc cc cc cc cc cc
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2s" repeatCount="indefinite"/>
+    </text>
+    <text x="900" y="78">90 90 90 55 48 89 e5 5d</text>
+  </g>
+
+  <!-- bottom status line -->
+  <g transform="translate(0 340)" font-family="'JetBrains Mono', monospace" font-size="11" fill="#71717a">
+    <circle cx="24" cy="-4" r="3" fill="#10b981">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="36" y="0">your binary never leaves this tab</text>
+
+    <text x="1176" y="0" text-anchor="end" fill="#52525b">v0.2 · MIT</text>
+  </g>
+</svg>

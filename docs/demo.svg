@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-label="BinScope workflow animation">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#05050a"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.04)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.01)"/>
+    </linearGradient>
+    <filter id="dropG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="460" fill="url(#bg2)"/>
+
+  <!-- title bar -->
+  <g transform="translate(40 30)" font-family="'Space Grotesk', sans-serif">
+    <circle cx="8" cy="8" r="6" fill="#ef4444"/>
+    <circle cx="28" cy="8" r="6" fill="#f59e0b"/>
+    <circle cx="48" cy="8" r="6" fill="#10b981"/>
+    <text x="80" y="13" font-size="13" fill="#71717a" font-family="'JetBrains Mono',monospace">binscope · live</text>
+  </g>
+
+  <!-- 5 step cards along the top -->
+  <g font-family="'Space Grotesk', sans-serif" font-size="13" fill="#e4e4e7">
+    <!-- step 1 — DROP -->
+    <g transform="translate(40 80)">
+      <rect width="200" height="100" rx="14" fill="url(#card)" stroke="#f59e0b" stroke-opacity="0.4"/>
+      <text x="14" y="26" font-size="10" fill="#fbbf24" letter-spacing="2">01 · DROP</text>
+      <text x="14" y="56" font-size="28" font-weight="700" fill="#fef3c7">
+        <tspan font-family="'JetBrains Mono', monospace">⬇ sample.exe</tspan>
+      </text>
+      <text x="14" y="82" font-size="11" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">drag &amp; drop · zero upload</text>
+      <rect width="200" height="100" rx="14" fill="none" stroke="#f59e0b" stroke-width="2">
+        <animate attributeName="stroke-opacity" values="0;1;0" dur="6s" begin="0s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- arrow 1 -->
+    <g transform="translate(248 130)" stroke="#52525b" stroke-width="1.5" fill="none">
+      <line x1="0" y1="0" x2="22" y2="0"/>
+      <polyline points="16,-5 22,0 16,5"/>
+    </g>
+
+    <!-- step 2 — PARSE -->
+    <g transform="translate(278 80)">
+      <rect width="200" height="100" rx="14" fill="url(#card)" stroke="#8b5cf6" stroke-opacity="0.4"/>
+      <text x="14" y="26" font-size="10" fill="#c4b5fd" letter-spacing="2">02 · PARSE</text>
+      <text x="14" y="56" font-size="22" font-weight="700" fill="#f5d0fe" font-family="'JetBrains Mono',monospace">PE / x86_64</text>
+      <text x="14" y="82" font-size="11" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">.text .rdata .data</text>
+      <rect width="200" height="100" rx="14" fill="none" stroke="#8b5cf6" stroke-width="2">
+        <animate attributeName="stroke-opacity" values="0;1;0" dur="6s" begin="1.2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <g transform="translate(486 130)" stroke="#52525b" stroke-width="1.5" fill="none">
+      <line x1="0" y1="0" x2="22" y2="0"/>
+      <polyline points="16,-5 22,0 16,5"/>
+    </g>
+
+    <!-- step 3 — DISASM -->
+    <g transform="translate(516 80)">
+      <rect width="200" height="100" rx="14" fill="url(#card)" stroke="#06b6d4" stroke-opacity="0.4"/>
+      <text x="14" y="26" font-size="10" fill="#67e8f9" letter-spacing="2">03 · DISASM</text>
+      <text x="14" y="50" font-size="14" font-weight="700" fill="#a5f3fc" font-family="'JetBrains Mono',monospace">push rbp</text>
+      <text x="14" y="68" font-size="14" font-weight="700" fill="#a5f3fc" font-family="'JetBrains Mono',monospace">mov  rbp, rsp</text>
+      <text x="14" y="86" font-size="14" font-weight="700" fill="#a5f3fc" font-family="'JetBrains Mono',monospace">call _decrypt</text>
+      <rect width="200" height="100" rx="14" fill="none" stroke="#06b6d4" stroke-width="2">
+        <animate attributeName="stroke-opacity" values="0;1;0" dur="6s" begin="2.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <g transform="translate(724 130)" stroke="#52525b" stroke-width="1.5" fill="none">
+      <line x1="0" y1="0" x2="22" y2="0"/>
+      <polyline points="16,-5 22,0 16,5"/>
+    </g>
+
+    <!-- step 4 — RULES -->
+    <g transform="translate(754 80)">
+      <rect width="200" height="100" rx="14" fill="url(#card)" stroke="#f43f5e" stroke-opacity="0.4"/>
+      <text x="14" y="26" font-size="10" fill="#fda4af" letter-spacing="2">04 · RULES</text>
+      <text x="14" y="52" font-size="18" font-weight="700" fill="#ffe4e6" font-family="'JetBrains Mono',monospace">⚠ UPX packed</text>
+      <text x="14" y="72" font-size="13" fill="#fda4af" font-family="'JetBrains Mono',monospace">⚠ anti-debug API</text>
+      <text x="14" y="90" font-size="13" fill="#fda4af" font-family="'JetBrains Mono',monospace">⚠ AES s-box</text>
+      <rect width="200" height="100" rx="14" fill="none" stroke="#f43f5e" stroke-width="2">
+        <animate attributeName="stroke-opacity" values="0;1;0" dur="6s" begin="3.6s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <g transform="translate(962 130)" stroke="#52525b" stroke-width="1.5" fill="none">
+      <line x1="0" y1="0" x2="22" y2="0"/>
+      <polyline points="16,-5 22,0 16,5"/>
+    </g>
+
+    <!-- step 5 — AI -->
+    <g transform="translate(992 80)">
+      <rect width="168" height="100" rx="14" fill="url(#card)" stroke="#d946ef" stroke-opacity="0.5"/>
+      <text x="14" y="26" font-size="10" fill="#f0abfc" letter-spacing="2">05 · AI ANALYST</text>
+      <text x="14" y="52" font-size="14" font-weight="700" fill="#fae8ff" font-family="'Space Grotesk', sans-serif">Claude opus-4.7</text>
+      <text x="14" y="74" font-size="11" fill="#e9d5ff" font-family="'JetBrains Mono',monospace">"this looks like a</text>
+      <text x="14" y="88" font-size="11" fill="#e9d5ff" font-family="'JetBrains Mono',monospace"> ransomware stub…"</text>
+      <rect width="168" height="100" rx="14" fill="none" stroke="#d946ef" stroke-width="2">
+        <animate attributeName="stroke-opacity" values="0;1;0" dur="6s" begin="4.8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- ===== terminal panel ===== -->
+  <g transform="translate(40 210)">
+    <rect width="720" height="220" rx="14" fill="url(#card)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="28" font-size="10" font-family="'JetBrains Mono',monospace" fill="#71717a" letter-spacing="3">TERMINAL · LIVE</text>
+    <g font-family="'JetBrains Mono', monospace" font-size="14">
+      <text x="20" y="62" fill="#10b981">$ binscope analyze sample.exe<tspan fill="#fbbf24" font-weight="700">_</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0s" fill="freeze"/>
+      </text>
+      <text x="20" y="92" fill="#a1a1aa">
+        <tspan fill="#67e8f9">→</tspan> format: <tspan fill="#fbbf24">PE / x86_64</tspan> · sections: <tspan fill="#fbbf24">5</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.2s" fill="freeze"/>
+      </text>
+      <text x="20" y="118" fill="#a1a1aa">
+        <tspan fill="#67e8f9">→</tspan> sha256: <tspan fill="#fbbf24">9f1e..a2b7</tspan> · entropy: <tspan fill="#f87171">7.91 ⚠</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="2s" fill="freeze"/>
+      </text>
+      <text x="20" y="144" fill="#a1a1aa">
+        <tspan fill="#67e8f9">→</tspan> packer: <tspan fill="#f87171">UPX detected</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.8s" fill="freeze"/>
+      </text>
+      <text x="20" y="170" fill="#a1a1aa">
+        <tspan fill="#67e8f9">→</tspan> imports: <tspan fill="#fbbf24">CryptEncrypt, VirtualAllocEx,</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="3.6s" fill="freeze"/>
+      </text>
+      <text x="118" y="190" fill="#fbbf24">
+        WriteProcessMemory, CreateRemoteThread
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="3.6s" fill="freeze"/>
+      </text>
+      <text x="20" y="210" fill="#10b981" font-weight="700">
+        ✓ analysis complete · <tspan fill="#a1a1aa">5 rule hits</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.4s" fill="freeze"/>
+      </text>
+    </g>
+  </g>
+
+  <!-- ===== disasm panel ===== -->
+  <g transform="translate(780 210)">
+    <rect width="380" height="220" rx="14" fill="url(#card)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="28" font-size="10" font-family="'JetBrains Mono',monospace" fill="#71717a" letter-spacing="3">DISASM · .text</text>
+
+    <g font-family="'JetBrains Mono', monospace" font-size="12">
+      <!-- highlight bar that scans down -->
+      <rect x="0" y="0" width="380" height="20" fill="#f59e0b" opacity="0.12">
+        <animate attributeName="y" values="42;186;42" dur="3s" repeatCount="indefinite"/>
+      </rect>
+
+      <text x="20" y="56"><tspan fill="#fbbf24">00401000</tspan>  <tspan fill="#a78bfa">push</tspan> <tspan fill="#e4e4e7">rbp</tspan></text>
+      <text x="20" y="76"><tspan fill="#fbbf24">00401001</tspan>  <tspan fill="#7dd3fc">mov</tspan>  <tspan fill="#e4e4e7">rbp, rsp</tspan></text>
+      <text x="20" y="96"><tspan fill="#fbbf24">00401004</tspan>  <tspan fill="#7dd3fc">mov</tspan>  <tspan fill="#e4e4e7">eax, 0x2a</tspan></text>
+      <text x="20" y="116"><tspan fill="#fbbf24">00401009</tspan>  <tspan fill="#86efac">add</tspan>  <tspan fill="#e4e4e7">rax, 1</tspan></text>
+      <text x="20" y="136"><tspan fill="#fbbf24">0040100d</tspan>  <tspan fill="#fcd34d">call</tspan> <tspan fill="#67e8f9">_decrypt</tspan></text>
+      <text x="20" y="156"><tspan fill="#fbbf24">00401012</tspan>  <tspan fill="#71717a">nop</tspan></text>
+      <text x="20" y="176"><tspan fill="#fbbf24">00401013</tspan>  <tspan fill="#a78bfa">pop</tspan>  <tspan fill="#e4e4e7">rbp</tspan></text>
+      <text x="20" y="196"><tspan fill="#fbbf24">00401014</tspan>  <tspan fill="#fda4af">ret</tspan></text>
+    </g>
+  </g>
+
+</svg>

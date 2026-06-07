@@ -1,17 +1,29 @@
 <div align="center">
 
-# ⌬ BinScope
+![BinScope banner](docs/banner.svg)
 
 ### **Reverse engineering. In your browser. Zero install. Zero uploads.**
 
 Drop in any binary — `.exe`, `.dll`, `.so`, `.dylib`, `.wasm`, `.class`, `.dex`, `.pyc` — and BinScope gives you disassembly, hex, strings, functions, imports, packer detection, entropy analysis, YARA-style rule hits, and an **AI analyst** powered by Claude. All client-side. **Your binary never leaves your tab.**
 
-[**🚀 Try it live →**](https://cypherdavy.github.io/binscope-/)
+[![Try it live](https://img.shields.io/badge/▶_TRY_IT_LIVE-cypherdavy.github.io%2Fbinscope--%2F-f59e0b?style=for-the-badge&labelColor=09090b)](https://cypherdavy.github.io/binscope-/)
 
-![status](https://img.shields.io/badge/status-v0.2_alive-f59e0b?style=for-the-badge)
-![license](https://img.shields.io/badge/license-MIT-8b5cf6?style=for-the-badge)
-![pull requests](https://img.shields.io/badge/PRs-welcome-10b981?style=for-the-badge)
-![runs-in](https://img.shields.io/badge/runs-100%25_in_browser-06b6d4?style=for-the-badge)
+![status](https://img.shields.io/badge/status-v0.2_alive-f59e0b?style=for-the-badge&labelColor=09090b)
+![license](https://img.shields.io/badge/license-MIT-8b5cf6?style=for-the-badge&labelColor=09090b)
+![pull requests](https://img.shields.io/badge/PRs-welcome-10b981?style=for-the-badge&labelColor=09090b)
+![runs-in](https://img.shields.io/badge/runs-100%25_in_browser-06b6d4?style=for-the-badge&labelColor=09090b)
+
+</div>
+
+---
+
+## 🎬 See it in action
+
+<div align="center">
+
+![BinScope demo](docs/demo.svg)
+
+*Drop → Parse → Disasm → Rules → AI. Five seconds, zero install.*
 
 </div>
 
@@ -125,7 +137,13 @@ This repo ships with a GitHub Pages workflow. Fork the repo, then:
 
 ## 🤝 Open to collaboration
 
-**BinScope is open source and looking for contributors.** Whether you're a reverse engineer, a frontend dev, an LLM nerd, or just curious — there's room for you.
+<div align="center">
+
+### **BinScope is open source and looking for builders.**
+
+</div>
+
+Whether you're a reverse engineer, a frontend dev, an LLM nerd, or just curious — there's room for you.
 
 - 🐛 **Open an [issue](https://github.com/cypherdavy/binscope-/issues)** if something parses wrong, a format is missing, or the UI breaks
 - 🔧 **Send a [PR](https://github.com/cypherdavy/binscope-/pulls)** for a new format parser, a YARA rule pack, a UI polish, anything
