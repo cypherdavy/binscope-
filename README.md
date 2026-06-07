@@ -84,6 +84,6 @@ git clone https://github.com/cypherdavy/binscope-.git && cd binscope- && npm i &
 
 <div align="center">
 
-**[@cypherdavy](https://github.com/cypherdavy)** · MIT · made with Claude
+**[@cypherdavy](https://github.com/cypherdavy)** · MIT 
 
 </div>
