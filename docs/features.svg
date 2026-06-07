@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" role="img" aria-label="BinScope features">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#05050a"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.01)"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="500" fill="url(#fbg)"/>
+  <circle cx="150" cy="100" r="200" fill="url(#glow1)"/>
+  <circle cx="1050" cy="400" r="200" fill="url(#glow2)"/>
+
+  <!-- 12 feature tiles in 4x3 grid -->
+  <g font-family="'Space Grotesk', sans-serif">
+
+    <!-- Row 1 -->
+    <g transform="translate(40 40)">
+      <rect width="270" height="135" rx="16" fill="url(#card)" stroke="#f59e0b" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">🧬</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#fef3c7">10+ FORMATS</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">PE · ELF · Mach-O · WASM</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">DEX · Java · pyc · APK · …</text>
+    </g>
+
+    <g transform="translate(322 40)">
+      <rect width="270" height="135" rx="16" fill="url(#card)" stroke="#06b6d4" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">🏗️</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#cffafe">6 ARCHS</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">x86 · x64 · ARM · ARM64</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">MIPS · RISC-V</text>
+    </g>
+
+    <g transform="translate(604 40)">
+      <rect width="270" height="135" rx="16" fill="url(#card)" stroke="#8b5cf6" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">🔎</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#ede9fe">FUNCTIONS</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">prologue scanning</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">call-target inference</text>
+    </g>
+
+    <g transform="translate(886 40)">
+      <rect width="274" height="135" rx="16" fill="url(#card)" stroke="#f472b6" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">🤖</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#fce7f3">AI ANALYST</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">Claude opus-4.7 explains</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">any block in plain English</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(40 195)">
+      <rect width="270" height="135" rx="16" fill="url(#card)" stroke="#10b981" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">#️⃣</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#d1fae5">HASHES</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">MD5 · SHA-1 · SHA-256</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">100% client-side · WebCrypto</text>
+    </g>
+
+    <g transform="translate(322 195)">
+      <rect width="270" height="135" rx="16" fill="url(#card)" stroke="#fbbf24" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">📈</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#fef9c3">ENTROPY</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">Shannon per section</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">flags packed / encrypted</text>
+    </g>
+
+    <g transform="translate(604 195)">
+      <rect width="270" height="135" rx="16" fill="url(#card)" stroke="#ef4444" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">📦</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#fee2e2">PACKERS</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">UPX · VMProtect · Themida</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">ASPack · MPRESS · 8 more</text>
+    </g>
+
+    <g transform="translate(886 195)">
+      <rect width="274" height="135" rx="16" fill="url(#card)" stroke="#22d3ee" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">🎯</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#cffafe">30+ RULES</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">crypto · anti-debug · injection</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">Mimikatz · Cobalt · Go · Rust</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(40 350)">
+      <rect width="270" height="135" rx="16" fill="url(#card)" stroke="#a78bfa" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">📚</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#ede9fe">IMPORTS</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">PE IAT · ELF dynsym</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">Mach-O dylib · WASM</text>
+    </g>
+
+    <g transform="translate(322 350)">
+      <rect width="270" height="135" rx="16" fill="url(#card)" stroke="#34d399" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">🔤</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#d1fae5">STRINGS · HEX</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">virtualized lists</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">instant on huge files</text>
+    </g>
+
+    <g transform="translate(604 350)">
+      <rect width="270" height="135" rx="16" fill="url(#card)" stroke="#facc15" stroke-opacity="0.4"/>
+      <text x="24" y="44" font-size="36">⚡</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#fef9c3">ZERO INSTALL</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">open URL · drop file</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#a1a1aa">works on Chromebooks too</text>
+    </g>
+
+    <g transform="translate(886 350)">
+      <rect width="274" height="135" rx="16" fill="url(#card)" stroke="#10b981" stroke-opacity="0.6"/>
+      <text x="24" y="44" font-size="36">🔒</text>
+      <text x="24" y="84" font-size="22" font-weight="800" fill="#d1fae5">ZERO UPLOAD</text>
+      <text x="24" y="108" font-size="11" font-family="'JetBrains Mono',monospace" fill="#6ee7b7">no backend · no telemetry</text>
+      <text x="24" y="124" font-size="11" font-family="'JetBrains Mono',monospace" fill="#6ee7b7">your sample stays local</text>
+      <circle cx="250" cy="22" r="5" fill="#10b981">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+  </g>
+</svg>

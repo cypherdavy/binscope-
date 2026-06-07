@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="BinScope roadmap">
+  <defs>
+    <linearGradient id="rbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#05050a"/>
+    </linearGradient>
+    <linearGradient id="rcard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.04)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.01)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="240" fill="url(#rbg)"/>
+
+  <!-- timeline line -->
+  <line x1="60" y1="120" x2="1140" y2="120" stroke="#27272a" stroke-width="2" stroke-dasharray="6 8"/>
+
+  <!-- v0.2 SHIPPED -->
+  <g transform="translate(80 120)" font-family="'Space Grotesk', sans-serif">
+    <circle r="14" fill="#10b981" stroke="#022c22" stroke-width="4"/>
+    <text x="0" y="5" text-anchor="middle" font-size="14" fill="#022c22" font-weight="900">✓</text>
+    <text x="0" y="-40" text-anchor="middle" font-size="11" fill="#10b981" font-family="'JetBrains Mono',monospace" letter-spacing="2">SHIPPED</text>
+    <text x="0" y="50" text-anchor="middle" font-size="18" font-weight="800" fill="#d1fae5">v0.2</text>
+    <text x="0" y="72" text-anchor="middle" font-size="11" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">10 formats · AI · YARA</text>
+  </g>
+
+  <!-- v0.3 -->
+  <g transform="translate(260 120)" font-family="'Space Grotesk', sans-serif">
+    <circle r="14" fill="#0a0a14" stroke="#f59e0b" stroke-width="3"/>
+    <text x="0" y="6" text-anchor="middle" font-size="14" fill="#f59e0b" font-weight="900">○</text>
+    <text x="0" y="-40" text-anchor="middle" font-size="11" fill="#f59e0b" font-family="'JetBrains Mono',monospace" letter-spacing="2">NEXT</text>
+    <text x="0" y="50" text-anchor="middle" font-size="18" font-weight="800" fill="#fef3c7">Ghidra-WASM</text>
+    <text x="0" y="72" text-anchor="middle" font-size="11" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">C-like decompilation</text>
+  </g>
+
+  <!-- v0.4 -->
+  <g transform="translate(440 120)" font-family="'Space Grotesk', sans-serif">
+    <circle r="12" fill="#0a0a14" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="0" y="-40" text-anchor="middle" font-size="11" fill="#8b5cf6" font-family="'JetBrains Mono',monospace" letter-spacing="2">SOON</text>
+    <text x="0" y="50" text-anchor="middle" font-size="18" font-weight="800" fill="#ede9fe">Share URLs</text>
+    <text x="0" y="72" text-anchor="middle" font-size="11" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">gzip+base64 permalinks</text>
+  </g>
+
+  <!-- v0.5 -->
+  <g transform="translate(620 120)" font-family="'Space Grotesk', sans-serif">
+    <circle r="12" fill="#0a0a14" stroke="#06b6d4" stroke-width="2"/>
+    <text x="0" y="-40" text-anchor="middle" font-size="11" fill="#06b6d4" font-family="'JetBrains Mono',monospace" letter-spacing="2">PLAN</text>
+    <text x="0" y="50" text-anchor="middle" font-size="18" font-weight="800" fill="#cffafe">Rule editor</text>
+    <text x="0" y="72" text-anchor="middle" font-size="11" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">write YARA in browser</text>
+  </g>
+
+  <!-- v0.6 -->
+  <g transform="translate(800 120)" font-family="'Space Grotesk', sans-serif">
+    <circle r="12" fill="#0a0a14" stroke="#d946ef" stroke-width="2"/>
+    <text x="0" y="-40" text-anchor="middle" font-size="11" fill="#d946ef" font-family="'JetBrains Mono',monospace" letter-spacing="2">PLAN</text>
+    <text x="0" y="50" text-anchor="middle" font-size="18" font-weight="800" fill="#fae8ff">Unicorn-WASM</text>
+    <text x="0" y="72" text-anchor="middle" font-size="11" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">dynamic sandbox</text>
+  </g>
+
+  <!-- v0.7 -->
+  <g transform="translate(980 120)" font-family="'Space Grotesk', sans-serif">
+    <circle r="12" fill="#0a0a14" stroke="#f472b6" stroke-width="2"/>
+    <text x="0" y="-40" text-anchor="middle" font-size="11" fill="#f472b6" font-family="'JetBrains Mono',monospace" letter-spacing="2">PLAN</text>
+    <text x="0" y="50" text-anchor="middle" font-size="18" font-weight="800" fill="#fce7f3">Multiplayer</text>
+    <text x="0" y="72" text-anchor="middle" font-size="11" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">CTF team cursors</text>
+  </g>
+
+  <!-- v1.0 -->
+  <g transform="translate(1130 120)" font-family="'Space Grotesk', sans-serif">
+    <circle r="14" fill="#0a0a14" stroke="#fbbf24" stroke-width="3"/>
+    <text x="0" y="5" text-anchor="middle" font-size="14" fill="#fbbf24" font-weight="900">★</text>
+    <text x="0" y="-40" text-anchor="middle" font-size="11" fill="#fbbf24" font-family="'JetBrains Mono',monospace" letter-spacing="2">GOAL</text>
+    <text x="0" y="50" text-anchor="middle" font-size="18" font-weight="800" fill="#fef9c3">v1.0</text>
+    <text x="0" y="72" text-anchor="middle" font-size="11" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">Plugin API</text>
+  </g>
+
+  <!-- animated pulse on v0.3 (next) -->
+  <circle cx="260" cy="120" r="14" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.7">
+    <animate attributeName="r" values="14;30;14" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0;0.7" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

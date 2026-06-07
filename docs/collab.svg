@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Open to collaboration">
+  <defs>
+    <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#1a0b2e"/>
+    </linearGradient>
+    <linearGradient id="ccard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.01)"/>
+    </linearGradient>
+    <radialGradient id="cglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#cbg)"/>
+  <circle cx="600" cy="160" r="400" fill="url(#cglow)"/>
+
+  <!-- big title -->
+  <g font-family="'Space Grotesk', sans-serif" text-anchor="middle">
+    <text x="600" y="62" font-size="36" font-weight="900" fill="#fef3c7">JOIN THE BUILD ⚒</text>
+    <text x="600" y="92" font-size="14" fill="#a1a1aa" font-family="'JetBrains Mono',monospace" letter-spacing="3">open source · MIT · no gatekeeping</text>
+  </g>
+
+  <!-- 4 CTA cards -->
+  <g font-family="'Space Grotesk', sans-serif">
+
+    <g transform="translate(80 130)">
+      <rect width="240" height="140" rx="18" fill="url(#ccard)" stroke="#f59e0b" stroke-opacity="0.5"/>
+      <text x="24" y="50" font-size="42">⭐</text>
+      <text x="24" y="90" font-size="18" font-weight="800" fill="#fef3c7">STAR</text>
+      <text x="24" y="112" font-size="12" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">show some love</text>
+      <text x="24" y="128" font-size="12" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">it really helps ✦</text>
+      <rect width="240" height="140" rx="18" fill="none" stroke="#fbbf24">
+        <animate attributeName="stroke-opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <g transform="translate(340 130)">
+      <rect width="240" height="140" rx="18" fill="url(#ccard)" stroke="#ef4444" stroke-opacity="0.5"/>
+      <text x="24" y="50" font-size="42">🐛</text>
+      <text x="24" y="90" font-size="18" font-weight="800" fill="#fee2e2">REPORT</text>
+      <text x="24" y="112" font-size="12" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">parser broken?</text>
+      <text x="24" y="128" font-size="12" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">file an issue →</text>
+    </g>
+
+    <g transform="translate(600 130)">
+      <rect width="240" height="140" rx="18" fill="url(#ccard)" stroke="#10b981" stroke-opacity="0.5"/>
+      <text x="24" y="50" font-size="42">🔧</text>
+      <text x="24" y="90" font-size="18" font-weight="800" fill="#d1fae5">BUILD</text>
+      <text x="24" y="112" font-size="12" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">ship a PR</text>
+      <text x="24" y="128" font-size="12" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">any size welcome</text>
+    </g>
+
+    <g transform="translate(860 130)">
+      <rect width="240" height="140" rx="18" fill="url(#ccard)" stroke="#8b5cf6" stroke-opacity="0.5"/>
+      <text x="24" y="50" font-size="42">💡</text>
+      <text x="24" y="90" font-size="18" font-weight="800" fill="#ede9fe">IDEATE</text>
+      <text x="24" y="112" font-size="12" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">wild idea?</text>
+      <text x="24" y="128" font-size="12" fill="#a1a1aa" font-family="'JetBrains Mono',monospace">start a discussion</text>
+    </g>
+
+  </g>
+
+  <!-- tech stack ribbon -->
+  <g transform="translate(0 290)" font-family="'JetBrains Mono', monospace" font-size="11" fill="#52525b" text-anchor="middle">
+    <text x="600" y="0">React · TypeScript · Vite · Tailwind · Capstone-WASM · WebCrypto · Claude API</text>
+  </g>
+</svg>
