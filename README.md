@@ -82,8 +82,9 @@ git clone https://github.com/cypherdavy/binscope-.git && cd binscope- && npm i &
 
 <br/>
 
-<div align="center">
-**[Binscope](https://cypherdavy.github.io/binscope-/)**
-**[@cypherdavy](https://github.com/cypherdavy)** · MIT 
-
+<div align="center"><p align="center">
+  <a href="https://cypherdavy.github.io/binscope-/">
+    <img src="https://img.shields.io/badge/Open-Binscope-24292e?style=for-the-badge" alt="Open Binscope">
+  </a>
+</p>
 </div>
